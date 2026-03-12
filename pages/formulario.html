@@ -8,48 +8,26 @@
 <body>
     <h1>Fale Conosco</h1>
     <fieldset>
-        <legend> Dúvidas e Sugestões</legend>
+        <legend> Preencha os campos abaixo </legend>
         <form action="resposta2.html" method="get" 
             target="_blank" enctype="application/x-www-form-urlencoded" autocomplete="on">
             <label for="nome">* Nome: </label>
             <input type="text" id="nome" required pattern="[a-zA-Z ]+" 
                 placeholder="Nome completo" maxlength="100"/> <br><br>
-            <label for="sexo">Sexo: </label>
-            <input type="radio" id="masc"  name="sexo" value="Masculino"/> Masculino
-            <input type="radio" id="fem" name="sexo" value="Feminino"/> Feminino
-            <input type="radio" id="outros" name="sexo" value="Outros"/> Outros <br><br>
-            <label for="estado">Estado</label>
-            <select name="estado" id="estado"> <!-- size="3" multiple -->
-                <option value=""></option>
-                <option value="RN">RN</option>
-                <option value="PB">PB</option>
-                <option value="PE">PE</option>
-                <option value="SE">SE</option>
-            </select><br><br>
-            <label for="cidade">Cidade</label>
-            <input list="cidade">
-            <datalist id="cidade">
-                <option value="Natal"> Natal</option>
-                <option value="SGA"> SGA</option>
-                <option value="Parnamirim"> Parnamirim</option>
-            </datalist><br><br>
             <label for="email">* E-mail: </label>
             <input type="email" id="email" placeholder="E-mail" required/><br><br>
             <label for="tel"> Telefone: </label>
             <input type="tel" placeholder="(84) 99999-9999" maxlength="11" pattern="[0..9]"/><br><br>
-            <label for="data">Data: </label>
-            <input type="date"><br><br>
-            Número: <input type="number" step="5" min="5" max="100"/><br><br>
+
+            Assunto <select name="assunto" id="assunto">
+                <option value=""></option>
+                <option value="Agendar passeio">Agendar passeio</option>
+                <option value="Orçamento">Orçamento</option>
+                <option value="Outros">Outros</option>
+            </select><br><br>
             <label for="mensagem">Mensagem:</label><br>
-            <textarea name="mensagem" id="menagem" rows="5" cols="30"></textarea><br><br>  
-            
-            <input type="checkbox" name="robo" id="robo" value="SIM">   
-            <label for="robo">Você não é um robô? </label>  <br><br>
-             
-            <input type="submit" value="Enviar"/>
-            <input type="reset" value="Limpar">         
-
-
+            <textarea name="mensagem" id="mensagem" rows="5" cols="30"></textarea><br><br>
+            <input style="background-color: rgb(5, 223, 103); color: white;" type="submit" value="Enviar"/>
     </form>
     </fieldset>
 </body>
