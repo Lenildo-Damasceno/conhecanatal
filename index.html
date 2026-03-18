@@ -7,19 +7,79 @@
     <meta http-equiv="refresh" content="30">
     <meta author="conheça natal">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico.png" >
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Conheça Natal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        header {
+            background-color: #ffcc88;
+            padding: 6px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .header-left { display: flex; align-items: center; gap: 14px; }
+        .header-tagline { font-size: 12px; color: #7a4000; font-style: italic; }
+        .header-right { display: flex; align-items: center; gap: 18px; }
+        .header-weather { font-size: 12px; color: #7a4000; text-align: center; line-height: 1.4; }
+        .header-weather span { font-size: 18px; }
+        nav {
+            background-color: #e8820c;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            min-height: 56px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+        }
+        nav img { height: 44px; width: auto; margin-right: 10px; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 14px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        nav a:hover { background-color: #c46800; border-radius: 4px; }
+        nav #google_translate_element { margin-left: auto; }
+    </style>
 </head>
 <body>
-   
-<img src="assets/img/logoh.png" alt="Logo" width="300">
+   <header>
+    <div class="header-left">
+        <p class="header-tagline">☀️ Descubra o melhor de Natal – RN<br>Praias, cultura e muito sol!</p>
+    </div>
+    <div class="header-right">
+        <div class="header-weather">
+            <span>🌡️</span><br>
+            Natal, RN · ~28°C · Ensolarado
+        </div>
+        <div id="google_translate_element"></div>
+    </div>
+</header>
 
 <nav>
+<img src="assets/img/logoh.png" alt="Logo">
 <a href="passeios.html">Passeios</a>
 <a href="praias.html">Praias</a>
 <a href="https://visit.natal.br/" target="_blank">Saiba mais</a>
 <a href="pages/formulario.html">Fale Conosco</a>
 </nav>
-</header>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+    'google_translate_element'
+  );
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main> 
     <article>
