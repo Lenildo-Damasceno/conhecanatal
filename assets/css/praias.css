@@ -1,0 +1,80 @@
+/* ================================================
+   praias.css — Estilos exclusivos da página de praias
+   Tema de cor: azul oceano (#0077b6)
+   ================================================ */
+
+/* Limita a largura do conteúdo, centraliza na tela
+   e adiciona espaçamento lateral */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Título principal da página em azul oceano */
+main h1 {
+    font-size: 28px;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo introdutório: espaçamento entre linhas e cor cinza suave */
+main > p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: #444;
+}
+
+/* Card de cada praia: fundo azul bem claro, borda esquerda azul,
+   cantos arredondados e espaçamento interno */
+section {
+    background-color: #f0f8ff;
+    border-left: 4px solid #0077b6;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+/* Título de cada seção/praia em azul */
+section h2 {
+    font-size: 20px;
+    color: #0077b6;
+    margin-bottom: 8px;
+}
+
+/* Texto descritivo da praia com espaçamento entre linhas */
+section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* Lista de detalhes da praia com recuo à esquerda */
+section ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Tabela ocupa toda a largura, sem espaço duplo entre bordas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+/* Células com padding interno e borda cinza */
+table th, table td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Cabeçalho da tabela: fundo azul oceano e texto branco */
+table th {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+/* Linhas pares com fundo azul bem claro para facilitar leitura */
+table tr:nth-child(even) {
+    background-color: #e8f4fc;
+}

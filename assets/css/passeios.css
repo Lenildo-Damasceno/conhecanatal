@@ -1,0 +1,80 @@
+/* ================================================
+   passeios.css — Estilos exclusivos da página de passeios
+   Tema de cor: laranja (#e8820c)
+   ================================================ */
+
+/* Limita a largura do conteúdo, centraliza na tela
+   e adiciona espaçamento lateral */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Título principal da página em laranja */
+main h1 {
+    font-size: 28px;
+    color: #e8820c;
+    margin-bottom: 10px;
+}
+
+/* Parágrafo introdutório: espaçamento entre linhas e cor cinza suave */
+main > p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+    color: #444;
+}
+
+/* Card de cada passeio: fundo laranja bem claro, borda esquerda laranja,
+   cantos arredondados e espaçamento interno */
+section {
+    background-color: #fff8f0;
+    border-left: 4px solid #e8820c;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+/* Título de cada seção/passeio em laranja escuro */
+section h2 {
+    font-size: 20px;
+    color: #c46800;
+    margin-bottom: 8px;
+}
+
+/* Texto descritivo do passeio com espaçamento entre linhas */
+section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* Lista de detalhes do passeio com recuo à esquerda */
+section ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Tabela ocupa toda a largura, sem espaço duplo entre bordas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+/* Células com padding interno e borda cinza */
+table th, table td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Cabeçalho da tabela: fundo laranja e texto branco */
+table th {
+    background-color: #e8820c;
+    color: #fff;
+}
+
+/* Linhas pares com fundo levemente alaranjado para facilitar leitura */
+table tr:nth-child(even) {
+    background-color: #fff4e6;
+}

@@ -1,0 +1,98 @@
+/* ================================================
+   index.css — Estilos exclusivos da página inicial
+   ================================================ */
+
+
+
+   @media (max-width: 768px) {
+  body {
+    background: lightgray;
+  }
+}
+
+/* Limita a largura do conteúdo, centraliza na tela
+   e adiciona espaçamento lateral */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Espaçamento entre linhas dos parágrafos para melhor leitura */
+main p {
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* Títulos h2: tamanho fixo, cor laranja e espaçamento acima e abaixo */
+main h2 {
+    font-size: 20px;
+    margin: 24px 0 10px;
+    color: #0f0bef;
+}
+
+/* Listas com recuo à esquerda e espaçamento entre itens */
+main ul, main ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+/* Espaçamento ao redor da figura (imagem + legenda) */
+figure {
+    margin: 20px 0;
+}
+
+/* Imagem responsiva com bordas arredondadas */
+figure img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Legenda da imagem: texto pequeno e cinza */
+figcaption {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Vídeo em bloco com espaçamento e bordas arredondadas */
+iframe {
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Tabela ocupa toda a largura, sem espaço duplo entre bordas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Células com padding interno e borda cinza */
+table th, table td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Cabeçalho da tabela: fundo laranja e texto branco */
+table th {
+    background-color: #0c50fd;
+    color: #fff;
+}
+
+/* Linhas pares com fundo levemente alaranjado para facilitar leitura */
+table tr:nth-child(even) {
+    background-color: #fff4e6;
+}
+.sol {
+  width: 100px;
+  height: 100px;
+  background-color: #ffcc00; /* Cor do sol */
+  border-radius: 50%; /* Faz ficar redondo */
+  box-shadow: 0 0 20px #ff9900, 0 0 40px #ffcc00; /* Efeito de brilho */
+  margin: 50px; /* Apenas para posicionar */
+}
