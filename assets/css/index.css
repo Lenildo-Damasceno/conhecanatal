@@ -10,6 +10,10 @@
   }
 }
 
+/* Usa box-sizing border-box globalmente para um box model previsível */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
 /* Limita a largura do conteúdo, centraliza na tela
    e adiciona espaçamento lateral */
 main {

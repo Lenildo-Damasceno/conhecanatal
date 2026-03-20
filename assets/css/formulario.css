@@ -2,6 +2,10 @@
    formulario.css — Estilos exclusivos da página de contato
    ================================================ */
 
+/* Usa box-sizing border-box globalmente para um box model previsível */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
 /* Limita a largura do formulário, centraliza na tela
    e adiciona espaçamento lateral — mais estreito que as outras páginas */
 main {
@@ -23,6 +27,14 @@ fieldset {
     border: 2px solid #e8820c;
     border-radius: 8px;
     padding: 24px;
+    max-height: 60vh; /* limita altura e permite rolagem se necessário */
+    overflow: auto;
+}
+
+/* Opcional: garante que o <form> também possa rolar se necessário */
+form {
+    max-height: 60vh;
+    overflow: auto;
 }
 
 /* Legenda do fieldset em negrito e laranja */
@@ -89,4 +101,11 @@ input[type="submit"] {
 /* Hover do botão: escurece o laranja */
 input[type="submit"]:hover {
     background-color: #c46800;
+}
+
+#mensagem {
+    max-height: 200px; /* ajusta conforme precisar */
+    min-height: 80px;
+    overflow: auto;    /* mostra barra de rolagem quando necessário */
+    resize: vertical;  /* permite redimensionar apenas verticalmente */
 }
