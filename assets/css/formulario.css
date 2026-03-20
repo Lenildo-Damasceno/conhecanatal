@@ -1,0 +1,92 @@
+/* ================================================
+   formulario.css — Estilos exclusivos da página de contato
+   ================================================ */
+
+/* Limita a largura do formulário, centraliza na tela
+   e adiciona espaçamento lateral — mais estreito que as outras páginas */
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Título da página em laranja escuro */
+main h1 {
+    font-size: 26px;
+    color: #c46800;
+    margin-bottom: 20px;
+}
+
+/* Borda do fieldset em laranja com cantos arredondados
+   e espaçamento interno generoso */
+fieldset {
+    border: 2px solid #e8820c;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+/* Legenda do fieldset em negrito e laranja */
+legend {
+    font-weight: bold;
+    color: #e8820c;
+    padding: 0 8px; /* espaço para não colar na borda */
+}
+
+/* Labels dos campos em negrito e cinza escuro */
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Estilo unificado para todos os campos de entrada:
+   largura total, padding interno, borda cinza e cantos arredondados */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* garante que o padding não ultrapasse a largura */
+}
+
+/* Ao focar em qualquer campo: remove o contorno padrão
+   e aplica borda laranja para indicar seleção */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e8820c;
+}
+
+/* Adiciona espaçamento abaixo das quebras de linha do formulário */
+br {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Botão de envio: fundo laranja, texto branco, sem borda,
+   padding generoso e cursor de clique */
+input[type="submit"] {
+    background-color: #e8820c;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s; /* animação suave ao passar o mouse */
+}
+
+/* Hover do botão: escurece o laranja */
+input[type="submit"]:hover {
+    background-color: #c46800;
+}

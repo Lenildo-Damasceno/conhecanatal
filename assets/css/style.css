@@ -1,0 +1,125 @@
+/* ================================================
+   style.css — Estilos GLOBAIS do site
+   Aplicado em TODAS as páginas
+   ================================================ */
+
+/* Remove margens e paddings padrão do navegador
+   e garante que bordas sejam incluídas no tamanho dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte padrão de todo o site */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------------------------------
+   HEADER — Barra superior com tagline e clima
+   ------------------------------------------------ */
+
+/* Fundo laranja claro, espaçamento lateral e
+   layout flexível para alinhar os itens lado a lado */
+header {
+    background-color: #ffcc88;
+    padding: 6px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa esquerda e direita */
+    flex-wrap: wrap; /* quebra linha em telas pequenas */
+    gap: 8px;
+}
+
+/* Lado esquerdo do header: contém a tagline */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Texto da tagline: pequeno, marrom e em itálico */
+.header-tagline {
+    font-size: 12px;
+    color: #7a4000;
+    font-style: italic;
+}
+
+/* Lado direito do header: contém clima e tradutor */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Bloco de clima: texto pequeno, centralizado e marrom */
+.header-weather {
+    font-size: 12px;
+    color: #7a4000;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Ícone do clima um pouco maior que o texto */
+.header-weather span {
+    font-size: 18px;
+}
+
+/* ------------------------------------------------
+   NAV — Barra de navegação principal
+   ------------------------------------------------ */
+
+/* Fundo laranja escuro, itens alinhados em linha,
+   altura mínima e sombra para dar profundidade */
+nav {
+    background-color: #e8820c;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 20px;
+    flex-wrap: wrap; /* quebra linha em telas pequenas */
+    min-height: 56px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Logo dentro da nav: altura fixa e margem à direita */
+nav img {
+    height: 44px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Links da nav: brancos, sem sublinhado, com padding
+   e negrito para destaque */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s; /* animação suave ao passar o mouse */
+}
+
+/* Efeito hover: fundo mais escuro e bordas arredondadas */
+nav a:hover {
+    background-color: #c46800;
+    border-radius: 4px;
+}
+
+/* Empurra o widget do Google Translate para o lado direito da nav */
+nav #google_translate_element {
+    margin-left: auto;
+}
+
+/* ------------------------------------------------
+   FOOTER — Rodapé do site
+   ------------------------------------------------ */
+
+/* Fundo verde, texto escuro, centralizado e com padding */
+footer {
+    background-color: #65c89b;
+    color: #15202b;
+    text-align: center;
+    padding: 10px 0;
+}
