@@ -90,3 +90,61 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #c46800;
 }
+
+form input, form select {
+    display: block;             /* Ocupa a linha inteira */
+    width: 100%;                /* Largura total do container */
+    padding: 0.3rem 0.5rem;     /* Espaçamento interno reduzido */
+    margin-top: 0.2rem;         /* Espaço entre o label e o campo */
+    border-radius: 0.3rem;      /* Cantos levemente arredondados */
+    border: 1px solid #7ff815;  /* Borda verde limão */
+    background: #0d0d1a;        /* Fundo escuro */
+    color: #fff;                /* Texto branco */
+    font-size: 0.85rem;         /* Fonte menor */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza mudança de status do campo */
+}
+
+textarea {
+    display: block;             /* Ocupa a linha inteira */
+    width: 100%;                /* Largura total do container */
+    padding: 0.3rem 0.5rem;     /* Espaçamento interno reduzido */
+    margin-top: 0.2rem;         /* Espaço entre o label e o campo */
+    border-radius: 0.3rem;      /* Cantos levemente arredondados */
+    border: 1px solid #7ff815;  /* Borda verde limão */
+    background: #0d0d1a;        /* Fundo escuro */
+    color: #fff;                /* Texto branco */
+    resize: vertical;           /* Permite redimensionar apenas verticalmente */
+    overflow-y: auto;           /* Scroll vertical quando o texto ultrapassa a altura */
+    max-height: 150px;          /* Altura máxima antes de ativar o scroll */
+    font-size: 0.85rem;         /* Fonte menor */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza mudança de status do campo */
+}
+
+
+
+
+/* ================================
+   PLACEHOLDERS
+   Estilo visual do texto de ajuda nos campos
+   ================================ */
+form input::placeholder,
+form textarea::placeholder {
+    color: #9fb3ff;         /* Azul claro para diferenciar do valor digitado */
+    font-style: italic;     /* Deixa o texto de dica mais evidente */
+    opacity: 1;             /* Garante cor consistente entre navegadores */
+}
+
+/* ================================
+   CAMPOS OBRIGATÓRIOS
+   Vermelho para inválido e verde para válido
+   ================================ */
+form :is(input, select, textarea):required:invalid {
+    border-color: #ff4d4f;                    /* Vermelho para campo obrigatório inválido */
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2); /* Destaque suave para erro */
+}
+
+form :is(input, select, textarea):required:valid {
+    border-color: #19f575;                    /* Verde para campo obrigatório válido */
+    box-shadow: 0 0 0 2px rgba(25, 245, 117, 0.18); /* Destaque suave para acerto */
+}
+

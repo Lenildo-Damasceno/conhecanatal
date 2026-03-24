@@ -111,6 +111,31 @@ nav a:hover {
 nav #google_translate_element {
     margin-left: auto;
 }
+nav :is(a, button) {
+    color: #fff;                /* Garante texto branco como cor base */
+    text-decoration: none;      /* Remove sublinhado de links no menu */
+    display: inline-block;      /* Permite aplicar transform sem deslocar o layout */
+    transition: color 0.3s ease, transform 0.2s ease;/* Anima cor e aumento no hover */
+}
+
+/* Cor de destaque e leve zoom ao passar o mouse nos itens do menu */
+nav :is(a, button):hover {
+    color: #7ff815;
+    transform: scale(1.08);
+}
+
+/* Destaca a página atual no menu com o roxo da identidade visual */
+nav a.ativo,
+nav a[aria-current="page"] {
+    color: #cb15ce;
+    font-weight: 700;
+}
+
+/* Efeito ao passar o mouse nos links do menu */
+nav a:active {
+    color: #1b08ed;
+    text-decoration: underline;
+}
 
 /* ------------------------------------------------
    FOOTER — Rodapé do site
@@ -122,4 +147,23 @@ footer {
     color: #15202b;
     text-align: center;
     padding: 10px 0;
+}
+footer a {
+    color: #7ff815;         /* Cor do texto: verde limão */
+    text-decoration: none;  /* Remove sublinhado */
+    margin-right: 10px;     /* Espaço entre os links */
+    display: inline-block;  /* Permite aplicar transform sem quebrar o layout */
+    transition: transform 0.2s ease, color 0.2s ease; /* Suaviza animação de tamanho e cor */
+}
+
+/* Efeito ao passar o mouse nos links do rodapé */
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+    transform: scale(1.08);     /* Aumenta levemente o tamanho do link */
+}
+
+::selection {
+    background: #7ff815;
+    color: #000;
+    text-shadow: none;
 }
