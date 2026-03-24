@@ -23,7 +23,7 @@ header {
 }
 
 .header-left { display: flex; align-items: center; gap: 14px; height: 100%; }
-.header-tagline { font-size: 12px; color: #7a4000; font-style: italic; }
+.header-tagline { font-size: 15px; color: #7a4000; font-style: italic; }
 .header-right { display: flex; align-items: center; gap: 18px; height: 100%; }
 .header-weather { font-size: 12px; color: #7a4000; text-align: center; line-height: 1.4; }
 .header-weather span { font-size: 18px; }
@@ -81,7 +81,7 @@ nav :is(a, button) {
 /* Cor de destaque e leve zoom ao passar o mouse nos itens do menu */
 nav :is(a, button):hover {
     color: #7ff815;
-    transform: scale(1.08);
+    transform: scale(1.50);
 }
 
 /* Destaca a página atual no menu com o roxo da identidade visual */
@@ -170,7 +170,7 @@ footer a:hover {
 }
 
 ::selection {
-    background: #7ff815;
+    background: #f7820d;
     color: #000;
     text-shadow: none;
 }
