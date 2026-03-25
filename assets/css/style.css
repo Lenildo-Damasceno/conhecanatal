@@ -169,6 +169,9 @@ footer a:hover {
     transform: scale(1.08);     /* Aumenta levemente o tamanho do link */
 }
 
+
+
+/* Estilo para o texto selecionado */
 ::selection {
     background: #f7820d;
     color: #000;
