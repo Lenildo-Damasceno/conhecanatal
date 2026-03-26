@@ -53,6 +53,13 @@ header {
     gap: 18px;
 }
 
+/* Player de audio no topo com tamanho reduzido */
+.header-player {
+    width: 220px;
+    max-width: 100%;
+    height: 36px;
+}
+
 /* Bloco de clima: texto pequeno, centralizado e marrom */
 .header-weather {
     font-size: 12px;

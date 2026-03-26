@@ -94,5 +94,22 @@ table tr:nth-child(even) {
   background-color: #ffcc00; /* Cor do sol */
   border-radius: 50%; /* Faz ficar redondo */
   box-shadow: 0 0 20px #ff9900, 0 0 40px #ffcc00; /* Efeito de brilho */
-  margin: 50px; /* Apenas para posicionar */
+    position: fixed;
+    top: 140px;
+    left: 1px;
+    margin: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: brilhar 1.6s infinite ease-in-out; /* Animação maior e mais intensa */
+}
+
+@keyframes brilhar {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #ff9900, 0 0 40px #ffcc00;
+    }
+    100% {
+        transform: scale(1.35);
+        box-shadow: 0 0 45px #ff9900, 0 0 90px #ffcc00;
+    }
 }

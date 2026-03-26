@@ -33,3 +33,57 @@ async function atualizarClima() {
 }
 
 atualizarClima();
+
+function iniciarRadioAutomatica() {
+    const radio = document.querySelector('.header-player');
+    if (!radio) return;
+
+    radio.autoplay = true;
+    radio.preload = 'auto';
+
+    const tentarPlay = async () => {
+        try {
+            await radio.play();
+            return true;
+        } catch (e) {
+            return false;
+        }
+    };
+
+    const limparEventosInteracao = () => {
+        document.removeEventListener('click', iniciarNaInteracao);
+        document.removeEventListener('keydown', iniciarNaInteracao);
+        document.removeEventListener('touchstart', iniciarNaInteracao);
+    };
+
+    // Tenta iniciar assim que a pagina carrega.
+    window.addEventListener('load', async () => {
+        const iniciou = await tentarPlay();
+
+        // Em navegadores que bloqueiam audio automatico,
+        // mutado costuma ser permitido.
+        if (!iniciou) {
+            radio.muted = true;
+            await tentarPlay();
+        }
+    });
+
+    // Tenta novamente quando o stream ficar pronto.
+    radio.addEventListener('canplay', () => {
+        tentarPlay();
+    });
+
+    // Se o navegador bloquear autoplay, tenta de novo
+    // na primeira interacao do usuario.
+    const iniciarNaInteracao = async () => {
+        radio.muted = false;
+        await tentarPlay();
+        limparEventosInteracao();
+    };
+
+    document.addEventListener('click', iniciarNaInteracao);
+    document.addEventListener('keydown', iniciarNaInteracao);
+    document.addEventListener('touchstart', iniciarNaInteracao);
+}
+
+iniciarRadioAutomatica();
