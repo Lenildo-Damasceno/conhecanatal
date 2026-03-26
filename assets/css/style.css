@@ -8,7 +8,7 @@ body { font-family: Arial, sans-serif; }
 
 header {
     background-color: #ffcc88;
-    padding: 6px 30px;
+    padding: 1px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +27,12 @@ header {
 .header-right { display: flex; align-items: center; gap: 18px; height: 100%; }
 .header-weather { font-size: 12px; color: #7a4000; text-align: center; line-height: 1.4; }
 .header-weather span { font-size: 18px; }
+
+.header-player-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
 nav {
     background-color: #e8820c;
